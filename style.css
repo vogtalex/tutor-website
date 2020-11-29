@@ -1,0 +1,155 @@
+a {
+    text-decoration: none;
+    color: #000;
+}
+  
+a:hover {
+    text-decoration: underline;
+}
+  
+p {
+    font-family: "Courier New", Courier, monospace;
+};
+  
+header {
+    background-color: #dc4405;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+  
+.site-title {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 80px;
+    font-weight: 100;
+    margin: 0 0 0 20px;
+    padding-top: 30px;
+}
+  
+.site-title a:hover{
+    text-decoration: none;
+}
+  
+.navbar {
+    background-color: #dc4405;
+    overflow: hidden;
+}
+  
+.navbar a{
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 30px;
+}
+  
+.navbar a:hover{
+    text-decoration: underline;
+    color: #f7f7f7;
+    background-color: #000000;
+}
+  
+.navbar a.active {
+    text-decoration: none;
+    color: #000000;
+    background-color: #f7f7f7;
+}
+  
+.tutor-img-container img {
+    max-height: 240px;
+    max-width: 300px;
+}
+  
+.tutor-info-container {
+    width: 100%;
+    margin-top: 20px;
+}
+  
+.tutor-contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+  
+.tutor {
+    display: inline-block;
+    vertical-align: top;
+    height: 400px;
+    width: 400px;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid #dadada;
+    border-radius: 3px;
+}
+  
+/*.tutor-major {
+    display: inline-block;
+    font-size: 80%;
+    padding: 3px;
+    margin: 3px 5px;
+    border: 1px solid #ababab;
+    border-radius: 3px;
+    background: #efefef;
+}*/
+  
+#tutor-modal-backdrop {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+  
+#tutor-modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1010;
+    overflow: scroll;
+}
+  
+.hidden {
+    display: none;
+}
+  
+.modal-dialog {
+    width: auto;
+    max-width: 600px;
+    min-width: 350px;
+    min-height: 300px;
+    margin: 40px auto;
+    background-color: #fff;
+    border-radius: 15px;
+}
+  
+.modal-header {
+    position: relative;
+    padding: 10px 20px;
+}
+  
+.modal-header h3 {
+    margin: 0;
+    font-size: 28px;
+}
+  
+#modal-close {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 24px;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+}
+  
+.modal-body {
+    padding: 20px;
+}
