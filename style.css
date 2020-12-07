@@ -85,16 +85,6 @@ header {
     border-radius: 3px;
 }
   
-/*.tutor-major {
-    display: inline-block;
-    font-size: 80%;
-    padding: 3px;
-    margin: 3px 5px;
-    border: 1px solid #ababab;
-    border-radius: 3px;
-    background: #efefef;
-}*/
-  
 #tutor-modal-backdrop {
     position: fixed;
     top: 0;
@@ -152,4 +142,209 @@ header {
   
 .modal-body {
     padding: 20px;
+}
+
+body { 
+    background: url("images/cream_dust.png") repeat 0 0;
+}
+
+.qualified-content{
+    padding: 20px;
+    text-align: left;
+    color: white;
+    width: 600px;
+    position: relative;
+    bottom: 20px;
+    left: 47.8%;
+}
+
+.sign-in-container{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/Apple.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100%;
+}
+
+.sign-in-title{
+
+  text-align: center;
+  position: relative;
+  left: 60%;
+  background: white;
+  transform: translate(-50%, -50%);
+  top: 40px;
+  padding: 10px;
+  width: 400px;
+}
+
+.sign-in-button{
+    color: white;
+    background-color: #dc4405;
+    font-size: 20px;
+    height: 50px;
+    width: 180px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 5%;
+}
+
+.tutor-finder-button{
+    color: white;
+    background-color: #dc4405;
+    font-size: 20px;
+    height: 50px;
+    width: 180px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 5%;
+}
+
+.main-content-container{
+}
+
+.main-content{
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    width: 38%;
+    margin-right: 200px;
+    margin-bottom: 200px;
+    padding: 10px;
+    top: 100px;
+    left: 20px;
+    background-color: #D3D3D3;
+    font-size: 20px;
+
+}
+
+
+#student-image{
+    width: 100%;
+    height: 100%;
+}
+
+.banner1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("images/tutor1.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.banner-title{
+  text-align: center;
+  position: relative;
+  padding: 100px;
+  left: 50%;
+  top: 150px;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.footer{
+    padding: 20px;
+    text-align: center;
+    background: #DCE1E3;
+}
+
+.about{
+    text-align: left;
+    margin: 40px;
+    padding: 20px;
+    background: #DCE1E3;
+}
+.team{
+    text-align: center;
+}
+
+#teamates{
+    margin-left: 14%;
+}
+
+.member {
+  display: inline-block;
+  vertical-align: top;
+  height: 360px;
+  width: 300px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #dadada;
+  border-radius: 3px;
+  box-shadow: 0 5px 5px 0 rbga(0,0,0, 0.3)
+}
+
+.member-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  height: 100%;
+  width: 100%;
+}
+
+.member-picture img {
+  max-height: 240px;
+  max-width: 300px;
+}
+
+.member-info {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.profile {
+  display: inline-block;
+  background-color: wheat;
+  border: 3px solid black;
+  margin: 5px;
+  padding: 20px;
+  width: 97%;
+  min-width: 100px;
+  min-height: 500px;    
+}
+
+.profile-head-content {
+  text-align: left;
+  height: 100%;
+  width: 40%;
+  max-width: 500px
+  margin: 0px;
+}
+
+#profile-image{
+  max-height: 40%;
+  max-width: 40%;
+}
+
+.profile-head-content-text{
+  width: 100%;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.profile-side-content{
+  position: absolute;
+  left: 50%;
+  bottom: 33%;
+  font-size: 20px;
+}
+
+.review-container{
+  background-color: #778899;
+  border: 1px solid black;
+  box-shadow: 0 6px 6px rgba(0,0,0,0.2);
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.review{
+  background-color: white;
+  border: 1px solid black;
+  box-shadow: 0 6px 6px rgba(0,0,0,0.2);
+  margin: 20px;
+  padding: 10px;
+  font-size: 20px;
 }
