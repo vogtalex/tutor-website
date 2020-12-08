@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-var tutorModal = document.getElementById("book-tutor-button");
-tutorModal.addEventListener('click', function(){
-  console.log("== the modal was clicked");
-  document.getElementById('tutor-modal').style.display = "block";
-  document.getElementById('tutor-modal-backdrop').style.display = "block";
-});
-=======
 var tutorModal = document.getElementById("book-tutor-button");
 var modalBackdrop = document.getElementById('tutor-modal-backdrop');
 var modal = document.getElementById('tutor-modal');
@@ -23,4 +15,3 @@ tutorCloseButton.addEventListener('click', function() {
     modalBackdrop.classList.toggle('hidden');
     modal.classList.toggle('hidden');
 });
->>>>>>> origin/master
