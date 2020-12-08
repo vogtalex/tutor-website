@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/form.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="plugins/layer/layer.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/form.js"></script>
+    <title>addForm</title>
+</head>
+<body>
+    <main class="f-center" id="main">
+        <h3>addForm</h3>
+        <form action="#" enctype="multipart/form-data">
+            <div class="row">
+                <label for="">tutor</label>
+                <input type="text" id="tutor">
+            </div>
+            <div class="row">
+                <label for="">grade:</label>
+                <input type="text" id="grade">
+            </div>
+            <div class="row">
+                <label for="">major:</label>
+                <input type="text" id="major">
+            </div>
+            <div class="row">
+                <label for="">picture：</label>
+                <input type="file" name="imageFile" id="fupPhoto" value="image"/>
+            </div>
+            <div class="row">
+                <label for=""> </label>
+                <img src="" alt="show" id="showImg">
+            </div>
+            <div class="row">
+                <label for="" style="vertical-align: top;">details</label>
+                <textarea name="" id="info" cols="120" rows="20"></textarea>
+            </div>
+        </form>
+        <button id="send">send</button>
+    </main>
+</body>
+</html>
