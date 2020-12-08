@@ -7,15 +7,6 @@ var fs = require('fs');
 var note = require('../model/note');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  note.find().then(result => {
-    console.log(result);
-    res.render('index');
-  })
-});
-router.get('/index', function(req, res, next) {
-    res.render('index');
-});
 router.get('/tutors', function(req, res, next) {
     note.find().then(result => {
       console.log(result);
