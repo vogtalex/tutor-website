@@ -1,0 +1,49 @@
+<main class="tutorFilterContent">
+
+  <aside class="filter-container">
+
+    <h2>Filters</h2>
+
+    <div class="filter-input-container">
+      <label for="filter-text" class="filter-input-label">Name</label>
+      <div class="filter-input-element">
+        <input type="text" name="filter-text" id="filter-text" class="filter-input">
+      </div>
+    </div>
+
+    <div class="filter-input-container">
+      <label for="filter-min-price" class="filter-input-label">Hourly Rate</label>
+      <div class="filter-input-element">
+        <input type="text" name="filter-min-price" id="filter-min-price" class="filter-input" placeholder="min">
+      </div>
+      <div class="filter-input-element">
+        <input type="text" name="filter-max-price" id="filter-max-price" class="filter-input" placeholder="max">
+      </div>
+    </div>
+
+    <div class="filter-input-container">
+      <label for="filter-city" class="filter-input-label">City</label>
+      <div class="filter-input-element">
+        <select id="filter-city" class="filter-input" name="filter-city">
+          <option selected value="">Any</option>
+          <option>Corvallis</option>
+          <option>Albany</option>
+          <option>Eugene</option>
+          <option>Portland</option>
+          <option>Salem</option>
+          <option>Bend</option>
+        </select>
+      </div>
+    </div>
+
+    <button id="filter-update-button" class="action-button">Update</button>
+
+  </aside>
+
+  <section id="tutors">
+    {{#each tutors}}
+      {{> tutorPreview}}
+    {{/each}}
+  </section>
+
+</main>
