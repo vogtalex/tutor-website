@@ -33,4 +33,3 @@ templates['tutorProfile'] = template({"compiler":[8,">= 4.3.0"],"main":function(
     + "</span>\n    </div>\n</div>\n";
 },"useData":true});
 })();
-

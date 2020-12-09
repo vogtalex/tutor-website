@@ -25,16 +25,56 @@
       <label for="filter-city" class="filter-input-label">City</label>
       <div class="filter-input-element">
         <select id="filter-city" class="filter-input" name="filter-city">
-          <option selected value="">Any</option>
-          <option>Corvallis</option>
-          <option>Albany</option>
-          <option>Eugene</option>
-          <option>Portland</option>
-          <option>Salem</option>
-          <option>Bend</option>
+              <option selected value="">Any</option>
+              <option>Corvallis</option>
+              <option>West Linn</option>
+              <option>Mason's Hometown</option>
+              <option>Chengxi's Hometown</option>
+              <option>Woodinville</option>
         </select>
       </div>
     </div>
+
+    <div class="filter-input-container">
+      <label for="filter-subject" class="filter-input-label">Subject</label>
+      <div class="filter-input-element">
+        <select id="filter-subject" class="filter-input" name="filter-subject">
+              <option selected value="">Any</option>
+              <option>Math</option>
+              <option>Computer Science</option>
+              <option>History</option>
+              <option>Economics</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="filter-input-container">
+      <fieldset id="filter-condition" class="filter-fieldset">
+        <p>Year</p>
+          <div>
+            <input type="checkbox" class="filter-year" name="filter-year" id="filter-year-freshman" value="freshman">
+            <label for="filter-condition-freshman">Freshman</label>
+          </div>
+          <div>
+            <input type="checkbox" class="filter-year" name="filter-year" id="filter-year-sophomore" value="sophomore">
+            <label for="filter-condition-sophomore">Sophomore</label>
+          </div>
+          <div>
+            <input type="checkbox" class="filter-year" name="filter-year" id="filter-year-junior" value="junior">
+            <label for="filter-condition-junior">Junior</label>
+          </div>
+          <div>
+            <input type="checkbox" class="filter-year" name="filter-year" id="filter-year-senior" value="senior">
+            <label for="filter-condition-senior">Senior</label>
+          </div>
+          <div>
+            <input type="checkbox" class="filter-year" name="filter-year" id="filter-year-graduate" value="graduate">
+            <label for="filter-condition-graduate">Graduate</label>
+          </div>
+      </fieldset>
+    </div>
+
+
 
     <button id="filter-update-button" class="action-button">Update</button>
 

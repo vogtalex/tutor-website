@@ -1,9 +1,10 @@
-<div class="tutor" data-name={{name}} data-year={{education}} data-price={{hourlyRate}}>
+<div class="tutor" data-name={{name}} data-year={{year}} data-price={{hourlyRate}} data-city={{city}} data-subject={{subject}}>
   <div class="tutor-contents">
     <div class="tutor-img-container">
       <img src="{{imageURL}}" alt="{{name}}">
     </div>
     <div class="tutor-info-container">
-      <a href="/tutors/{{name}}" class="tutor-title">{{name}}</a> <span class="tutor-year">{{education}}</span> <span class="tutor-price">${{hourlyRate}}</span>
+      <a href="/tutors/{{name}}" class="tutor-title">{{name}}</a> <span class="tutor-year">{{year}}</span> <span class="tutor-price">${{hourlyRate}}</span>
+      <span class="tutor-city"> {{city}} </span> <span class="tutor-subject"> {{subject}} </span>
     </div>
   </div>
