@@ -1,4 +1,3 @@
-/*
 var tutorModal = document.getElementById("book-tutor-button");
 var modalBackdrop = document.getElementById('tutor-modal-backdrop');
 var modal = document.getElementById('tutor-modal');
@@ -16,24 +15,3 @@ tutorCloseButton.addEventListener('click', function() {
     modalBackdrop.classList.toggle('hidden');
     modal.classList.toggle('hidden');
 });
-*/
-/*
-var tutorLink = document.getElementById("book-tutor-button");
-  tutorLink.addEventListener('click', function(){
-    console.log("== the tutorLink was clicked");
-    window.location.href = "/tutors/codybanks";
-});
-*/
-function insertTutorPreview(name, imageURL, hourlyRate) {
-
-  var content = {
-    name: name,
-    imageURL: imageURL,
-    hourlyRate: hourlyRate,
-  };
-
-  var tutorPreview = Handlebars.templates.post(content);
-
-  var tutorsSection = document.getElementById('tutors');
-  tutorsSection.insertAdjacentHTML('beforeend', tutorPreview);
-}

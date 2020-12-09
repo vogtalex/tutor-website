@@ -2,6 +2,7 @@ a {
     text-decoration: none;
     color: #000;
 }
+<<<<<<< HEAD
 
 a:hover {
     text-decoration: underline;
@@ -11,13 +12,28 @@ p {
     font-family: "Courier New", Courier, monospace;
 };
 
+=======
+  
+a:hover {
+    text-decoration: underline;
+}
+  
+p {
+    font-family: "Courier New", Courier, monospace;
+};
+  
+>>>>>>> eabf42d6b54ca13927364871dc949a6956cf032f
 header {
     background-color: #dc4405;
     display: flex;
     align-items: center;
     position: relative;
 }
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> eabf42d6b54ca13927364871dc949a6956cf032f
 .site-title {
     font-family: "Courier New", Courier, monospace;
     font-size: 80px;
@@ -25,16 +41,28 @@ header {
     margin: 0 0 0 20px;
     padding-top: 30px;
 }
+<<<<<<< HEAD
 
 .site-title a:hover{
     text-decoration: none;
 }
 
+=======
+  
+.site-title a:hover{
+    text-decoration: none;
+}
+  
+>>>>>>> eabf42d6b54ca13927364871dc949a6956cf032f
 .navbar {
     background-color: #dc4405;
     overflow: hidden;
 }
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> eabf42d6b54ca13927364871dc949a6956cf032f
 .navbar a{
     float: left;
     color: black;
@@ -43,29 +71,49 @@ header {
     text-decoration: none;
     font-size: 30px;
 }
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> eabf42d6b54ca13927364871dc949a6956cf032f
 .navbar a:hover{
     text-decoration: underline;
     color: #f7f7f7;
     background-color: #000000;
 }
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> eabf42d6b54ca13927364871dc949a6956cf032f
 .navbar a.active {
     text-decoration: none;
     color: #000000;
     background-color: #f7f7f7;
 }
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> eabf42d6b54ca13927364871dc949a6956cf032f
 .tutor-img-container img {
     max-height: 240px;
     max-width: 300px;
 }
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> eabf42d6b54ca13927364871dc949a6956cf032f
 .tutor-info-container {
     width: 100%;
     margin-top: 20px;
 }
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> eabf42d6b54ca13927364871dc949a6956cf032f
 .tutor-contents {
     display: flex;
     flex-direction: column;
@@ -73,7 +121,11 @@ header {
     height: 100%;
     width: 100%;
 }
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> eabf42d6b54ca13927364871dc949a6956cf032f
 .tutor {
     display: inline-block;
     vertical-align: top;
@@ -84,7 +136,11 @@ header {
     border: 2px solid #dadada;
     border-radius: 3px;
 }
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> eabf42d6b54ca13927364871dc949a6956cf032f
 #tutor-modal-backdrop {
     position: fixed;
     top: 0;
@@ -94,7 +150,11 @@ header {
     z-index: 1000;
     background-color: rgba(0, 0, 0, 0.85);
 }
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> eabf42d6b54ca13927364871dc949a6956cf032f
 #tutor-modal {
     position: fixed;
     top: 0;
@@ -104,11 +164,19 @@ header {
     z-index: 1010;
     overflow: scroll;
 }
+<<<<<<< HEAD
 
 .hidden {
     display: none;
 }
 
+=======
+  
+.hidden {
+    display: none;
+}
+  
+>>>>>>> eabf42d6b54ca13927364871dc949a6956cf032f
 .modal-dialog {
     width: auto;
     max-width: 600px;
@@ -118,17 +186,29 @@ header {
     background-color: #fff;
     border-radius: 15px;
 }
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> eabf42d6b54ca13927364871dc949a6956cf032f
 .modal-header {
     position: relative;
     padding: 10px 20px;
 }
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> eabf42d6b54ca13927364871dc949a6956cf032f
 .modal-header h3 {
     margin: 0;
     font-size: 28px;
 }
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> eabf42d6b54ca13927364871dc949a6956cf032f
 #modal-close {
     position: absolute;
     right: 10px;
@@ -139,12 +219,20 @@ header {
     padding: 0;
     cursor: pointer;
 }
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> eabf42d6b54ca13927364871dc949a6956cf032f
 .modal-body {
     padding: 20px;
 }
 
+<<<<<<< HEAD
 body {
+=======
+body { 
+>>>>>>> eabf42d6b54ca13927364871dc949a6956cf032f
     background: url("images/cream_dust.png") repeat 0 0;
 }
 
@@ -303,7 +391,11 @@ body {
   padding: 20px;
   width: 97%;
   min-width: 100px;
+<<<<<<< HEAD
   min-height: 500px;
+=======
+  min-height: 500px;    
+>>>>>>> eabf42d6b54ca13927364871dc949a6956cf032f
 }
 
 .profile-head-content {
@@ -326,8 +418,12 @@ body {
 }
 
 .profile-side-content{
+<<<<<<< HEAD
   display: inline-block;
   position: relative;
+=======
+  position: absolute;
+>>>>>>> eabf42d6b54ca13927364871dc949a6956cf032f
   left: 50%;
   bottom: 33%;
   font-size: 20px;
@@ -349,6 +445,7 @@ body {
   padding: 10px;
   font-size: 20px;
 }
+<<<<<<< HEAD
 
 .tutorFilterContent{
   display: flex;
@@ -398,3 +495,5 @@ body {
   font-family: "Courier New", Courier, monospace;
   text-align: center;
 }
+=======
+>>>>>>> eabf42d6b54ca13927364871dc949a6956cf032f
