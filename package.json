@@ -1,0 +1,28 @@
+{
+  "name": "cs290final",
+  "version": "1.0.0",
+  "description": "online tutor service",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "build": "handlebars views/partials/tutorPreview.handlebars -f public/tutorPreviewTemplate.js && handlebars views/partials/tutorProfile.handlebars -f public/tutorProfileTemplate.js",
+    "prestart": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/osu-cs290-f20/final-project-team-22.git"
+  },
+  "author": "Mason, Alex, Mitch, Chengxi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/osu-cs290-f20/final-project-team-22/issues"
+  },
+  "homepage": "https://github.com/osu-cs290-f20/final-project-team-22#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "handlebars": "^4.7.6",
+    "n": "^6.7.1"
+  }
+}
