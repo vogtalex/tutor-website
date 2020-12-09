@@ -32,4 +32,8 @@ templates['tutorProfile'] = template({"compiler":[8,">= 4.3.0"],"main":function(
     + alias4(alias5(((stack1 = (depth0 != null ? lookupProperty(depth0,"reviewData") : depth0)) != null ? lookupProperty(stack1,"reviewText") : stack1), depth0))
     + "</span>\n    </div>\n</div>\n";
 },"useData":true});
+<<<<<<< HEAD
 })();
+=======
+})();
+>>>>>>> Mason-Test-1
