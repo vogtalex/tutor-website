@@ -201,7 +201,8 @@ function modalAccept() {
   }
   else {
     var tutorRequest = new XMLHttpRequest();
-    var reqURL = '/tutorSearch/addTutor';
+    var reqURL = '/tutorSearch/' + name + '/addTutor';
+    console.log("req.url:", reqURL);
     tutorRequest.open('POST', reqURL);
 
     var reqBody = JSON.stringify({

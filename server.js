@@ -3,7 +3,7 @@ var path = require('path');
 var express = require('express');
 var exphbs = require('express-handlebars');
 var app = express();
-var port = process.env.PORT || 6452;
+var port = process.env.PORT || 7147;
 
 var tutorData = require('./tutorData');
 //var tutorData = require('./tutorData.json');
@@ -20,11 +20,10 @@ app.get('/homePage', function(req, res, next){
 });
 
 app.get('/tutorSearch', function(req, res, next) {
-  res.status(200).render('tutorSearch', {
-    tutors: tutorData});
+  res.status(200).render('tutorSearch', {tutorData});
 });
 
-app.post('tutorSearch/addTutor', function (req, res, next) {
+app.post('/tutorSearch/:tutor/addTutor', function (req, res, next) {
   console.log("req.body:", req.body);
   if (req.body) {
     tutorData.push({
@@ -63,12 +62,13 @@ app.post('tutorSearch/addTutor', function (req, res, next) {
 app.get('/tutors/:tutor', function(req, res, next) {
   var tutor = req.params.tutor;
   console.log("param:", tutor);
-  if (tutorData[tutor]) {
-    res.status(200).render('profilePage', tutorData[tutor]);
-  } else {
-    next();
+  for (var i = 0; i < tutorData.length; i++)
+  {
+    if (tutorData[i].name == tutor) {
+      res.status(200).render('profilePage', tutorData[i]);
+    }
   }
-
+  next();
 });
 
 //app.get('/about')

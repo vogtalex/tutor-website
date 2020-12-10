@@ -1,5 +1,5 @@
-{
-  "Jimmy Neutron": {
+[
+  {
     "name": "Jimmy Neutron",
     "imageURL": "http://placekitten.com/480/480",
     "subject": "Math",
@@ -22,8 +22,7 @@
       }
     ]
   },
-
-  "Cody Banks": {
+  {
     "name": "Cody Banks",
     "imageURL": "http://placekitten.com/480/480",
     "subject": "Computer Science",
@@ -31,7 +30,7 @@
     "year": "Sophomore",
     "zoomURL": "CodyZoomLink.com",
     "experience": "I had an intership with the CIA",
-    "email":"jackHarlowIsUnderrated@straightfax.com",
+    "email": "jackHarlowIsUnderrated@straightfax.com",
     "hourlyRate": 100,
     "reviewData": [
       {
@@ -45,5 +44,17 @@
         "reviewText": "Not enough lava"
       }
     ]
+  },
+  {
+    "name": "Mitchell Stewart",
+    "imageURL": "http://placekitten.com/480/480",
+    "hourlyRate": "200",
+    "city": "West Linn",
+    "subject": "Economics",
+    "year": "Sophomore",
+    "zoomURL": "yeet.com",
+    "experience": "I am very good at economics",
+    "email": "vogta@oregonstate.edu",
+    "reviewData": []
   }
-}
+]
