@@ -1,7 +1,7 @@
 (function() {
   var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
 templates['tutorProfile'] = template({"compiler":[8,">= 4.3.0"],"main":function(container,depth0,helpers,partials,data) {
-    var stack1, helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=container.hooks.helperMissing, alias3="function", alias4=container.escapeExpression, alias5=container.lambda, lookupProperty = container.lookupProperty || function(parent, propertyName) {
+    var helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=container.hooks.helperMissing, alias3="function", alias4=container.escapeExpression, lookupProperty = container.lookupProperty || function(parent, propertyName) {
         if (Object.prototype.hasOwnProperty.call(parent, propertyName)) {
           return parent[propertyName];
         }
@@ -24,12 +24,6 @@ templates['tutorProfile'] = template({"compiler":[8,">= 4.3.0"],"main":function(
     + alias4(((helper = (helper = lookupProperty(helpers,"experience") || (depth0 != null ? lookupProperty(depth0,"experience") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"experience","hash":{},"data":data,"loc":{"start":{"line":17,"column":57},"end":{"line":17,"column":71}}}) : helper)))
     + "</span>\n      <hr></hr>\n      <h4>Quality Rating: </h4><span class=\"rating\">4.9/5 Stars</span>\n      <hr></hr>\n      <h4>Hourly Rate: </h4><span class=\"price\">"
     + alias4(((helper = (helper = lookupProperty(helpers,"hourlyRate") || (depth0 != null ? lookupProperty(depth0,"hourlyRate") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"hourlyRate","hash":{},"data":data,"loc":{"start":{"line":21,"column":48},"end":{"line":21,"column":62}}}) : helper)))
-    + "</span>\n  </div>\n</div>\n\n<div class=\"review-container\">\n  <h2>Reviews:</h2>\n  <div class=\"review\">\n      <i class=\"fas fa-user\"></i><span class=\"review-name\">  "
-    + alias4(alias5(((stack1 = (depth0 != null ? lookupProperty(depth0,"reviewData") : depth0)) != null ? lookupProperty(stack1,"reviewerName") : stack1), depth0))
-    + "</span>\n      <h4>Quality Rating: <span class=\"rating\">"
-    + alias4(alias5(((stack1 = (depth0 != null ? lookupProperty(depth0,"reviewData") : depth0)) != null ? lookupProperty(stack1,"rating") : stack1), depth0))
-    + "</span></h4>\n      <hr></hr>\n      <h4>Review:</h4>\n      <span class=\"review-text\">"
-    + alias4(alias5(((stack1 = (depth0 != null ? lookupProperty(depth0,"reviewData") : depth0)) != null ? lookupProperty(stack1,"reviewText") : stack1), depth0))
-    + "</span>\n    </div>\n</div>\n";
+    + "</span>\n  </div>\n</div>\n";
 },"useData":true});
 })();

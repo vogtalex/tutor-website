@@ -24,6 +24,10 @@ var tutorLink = document.getElementById("book-tutor-button");
     window.location.href = "/tutors/codybanks";
 });
 */
+
+var currHTML = document.getElementById('tutors');
+console.log("current html:", currHTML);
+
 function insertTutorPreview(name, imageURL, hourlyRate, city, subject, year) {
 
   var content = {
@@ -50,7 +54,6 @@ function previewIsAcceptable(preview, filters) {
   if (filters.name) {
     var tutorName = preview.name.toLowerCase();
     var filterName = filters.name.toLowerCase();
-    console.log("failed at name");
     if (tutorName.indexOf(filterName) === -1) {
       return false;
     }
@@ -58,7 +61,6 @@ function previewIsAcceptable(preview, filters) {
 
   if (filters.minRate) {
     var filterMinRate = parseInt(filters.minRate);
-    console.log("failed at min");
     if (parseInt(preview.hourlyRate) < filterMinRate) {
       return false;
     }
@@ -66,27 +68,31 @@ function previewIsAcceptable(preview, filters) {
 
   if (filters.maxRate) {
     var filterMaxRate = parseInt(filters.maxRate);
-    console.log("failed at max");
     if (parseInt(preview.hourlyRate) > filterMaxRate) {
       return false;
     }
   }
 
   if (filters.city) {
-    console.log("failed at city");
     if (preview.city.toLowerCase() !== filters.city.toLowerCase()) {
       return false;
     }
   }
 
-  if (filters.year && filters.year.length > 0) {
-    console.log("failed at year");
-    if (filters.year.indexOf(preview.year) === -1) {
+  if (filters.subject) {
+    if (preview.subject.toLowerCase() !== filters.subject.toLowerCase()) {
       return false;
     }
   }
 
-  console.log("did not fail")
+  if (filters.year && filters.year.length > 0) {
+    console.log("filters.year:", filters.year);
+    console.log("preview.year:", preview.year.toLowerCase());
+    if (filters.year.indexOf(preview.year.toLowerCase()) === -1) {
+      return false;
+    }
+  }
+
   return true;
 
 }
@@ -116,6 +122,8 @@ function filter() {
     }
   }
 
+  console.log("filters.year:", filters.year);
+
   var previews = document.getElementById('tutors');
   while (previews.lastChild) {
     previews.removeChild(previews.lastChild);
@@ -133,11 +141,11 @@ function filter() {
 
 function saveCurrentPreviews(currentPreview) {
   var preview = {
-    name: currentPreview.getAttribute('data-name'),
-    year: currentPreview.getAttribute('data-year'),
-    hourlyRate: currentPreview.getAttribute('data-price'),
-    city: currentPreview.getAttribute('data-city'),
-    subject: currentPreview.getAttribute('data-subject')
+    name: currentPreview.getAttribute('data-name').trim(),
+    year: currentPreview.getAttribute('data-year').trim(),
+    hourlyRate: currentPreview.getAttribute('data-price').trim(),
+    city: currentPreview.getAttribute('data-city').trim(),
+    subject: currentPreview.getAttribute('data-subject').trim()
   }
   var tutorImage = currentPreview.querySelector('.tutor-img-container img');
   preview.imageURL = tutorImage.src;

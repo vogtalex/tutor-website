@@ -2,7 +2,7 @@ var path = require('path');
 var express = require('express');
 var exphbs = require('express-handlebars');
 var app = express();
-var port = process.env.PORT || 3078;
+var port = process.env.PORT || 3021;
 
 
 var tutorData = require('./tutorData.json');
@@ -19,12 +19,12 @@ app.get('/homePage', function(req, res, next){
 
 app.get('/tutorSearch', function(req, res, next) {
   res.status(200).render('tutorSearch', {
-    tutors: tutorData
-  });
+    tutors: tutorData});
 });
 
 app.get('/tutors/:tutor', function(req, res, next) {
   var tutor = req.params.tutor;
+  console.log("param:", tutor);
   if (tutorData[tutor]) {
     res.status(200).render('profilePage', tutorData[tutor]);
   } else {
@@ -32,6 +32,8 @@ app.get('/tutors/:tutor', function(req, res, next) {
   }
 
 });
+
+//app.get('/about')
 
 app.get('*', function(req, res) {
   res.status(404).render('404',{

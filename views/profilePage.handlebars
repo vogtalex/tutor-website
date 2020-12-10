@@ -2,4 +2,9 @@
     {{#if this.name}}
       {{> tutorProfile}}
     {{/if}}
+    {{#if reviewData}}
+      {{#each reviewData}}
+        {{> tutorReview}}
+      {{/each}}
+    {{/if}}
 </main>
