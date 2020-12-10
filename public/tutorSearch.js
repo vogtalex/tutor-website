@@ -153,6 +153,98 @@ function saveCurrentPreviews(currentPreview) {
   return preview;
 }
 
+function toggleModal() {
+  var modalBackdrop = document.getElementById('modal-backdrop');
+  var modal = document.getElementById('add-tutor-modal');
+
+  modalBackdrop.classList.toggle('hidden');
+  modal.classList.toggle('hidden');
+}
+
+function modalClear() {
+  var url = document.getElementById('url-input');
+  var name = document.getElementById('name-input');
+  var hourlyRate = document.getElementById('hourly-rate-input');
+  var city = document.getElementById('city-input');
+  var subject = document.getElementById('subject-input');
+  var year = document.getElementById('year-input');
+  var zoomURL = document.getElementById('zoom-url-input');
+  var experience = document.getElementById('experience-input');
+  var email = document.getElementById('email-input');
+
+  url.value = "";
+  name.value = "";
+  hourlyRate.value = "";
+  city.value = "";
+  subject.value = "";
+  year.value = "";
+  zoomURL.value = "";
+  experience.value = "";
+  email.value = "";
+}
+
+function modalAccept() {
+  console.log("modal accept has been clicked");
+  var url = document.getElementById('url-input').value.trim();
+  var name = document.getElementById('name-input').value.trim();
+  var hourlyRate = document.getElementById('hourly-rate-input').value.trim();
+  var city = document.getElementById('city-input').value.trim();
+  var subject = document.getElementById('subject-input').value.trim();
+  var year = document.getElementById('year-input').value.trim();
+  var zoomURL = document.getElementById('zoom-url-input').value.trim();
+  var experience = document.getElementById('experience-input').value.trim();
+  var email = document.getElementById('email-input').value.trim();
+  var reviewData = [];
+
+  if (url == "" || name == "" || hourlyRate == "" || city == "" || subject == "" || year == "" || zoomURL == "" || experience == "" || email == "") {
+    alert("All fields must be filled in");
+  }
+  else {
+    var tutorRequest = new XMLHttpRequest();
+    var reqURL = '/tutorSearch/addTutor';
+    tutorRequest.open('POST', reqURL);
+
+    var reqBody = JSON.stringify({
+      name: name,
+      imageURL: url,
+      hourlyRate: hourlyRate,
+      city: city,
+      subject: subject,
+      year: year,
+      zoomURL: zoomURL,
+      experience: experience,
+      email: email,
+      reviewData: reviewData
+    });
+
+    tutorRequest.setRequestHeader('Content-Type', 'application/json');
+    tutorRequest.addEventListener('load', function (event) {
+      if (event.target.status === 200) {
+        var tutorPreviewTemplate = Handlebars.templates.tutorPreview;
+        var newTutorPreviewHTML = tutorPreviewTemplate({
+          name: name,
+          imageURL: url,
+          hourlyRate: hourlyRate,
+          city: city,
+          subject: subject,
+          year: year,
+          zoomURL: zoomURL,
+          experience: experience,
+          email: email,
+          reviewData: reviewData
+        });
+        var tutorsSection = document.getElementById('tutors');
+        tutorsSection.insertAdjacentHTML('beforeend', newTutorPreviewHTML);
+      }
+      else {
+        alert("Error adding tutor profile to database:" + event.target.response);
+      }
+    });
+    tutorRequest.send(reqBody);
+    toggleModal();
+  }
+}
+
 var preloadedPreviews = document.getElementsByClassName('tutor');
 for (var i = 0; i < preloadedPreviews.length; i++) {
   tutorPreviews.push(saveCurrentPreviews(preloadedPreviews[i]));
@@ -162,3 +254,16 @@ var filterUpdateButton = document.getElementById('filter-update-button');
 if (filterUpdateButton) {
   filterUpdateButton.addEventListener('click', filter);
 }
+
+var createTutorProfileButton = document.getElementById('add-tutor-button');
+createTutorProfileButton.addEventListener('click', toggleModal);
+
+var modalCloseButton = document.getElementById('modal-close');
+modalCloseButton.addEventListener('click', toggleModal);
+
+var modalClearButton = document.getElementById('modal-clear');
+modalClearButton.addEventListener('click', modalClear);
+
+var modalAcceptButton = document.getElementById('modal-accept');
+modalAcceptButton.addEventListener('click', modalAccept);
+
