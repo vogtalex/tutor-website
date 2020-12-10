@@ -2,7 +2,6 @@
   "Jimmy Neutron": {
     "name": "Jimmy Neutron",
     "imageURL": "http://placekitten.com/480/480",
-    "subjects": ["Math", "Biology", "Computer Science"],
     "subject": "Math",
     "city": "Corvallis",
     "year": "Junior",
@@ -27,7 +26,6 @@
   "Cody Banks": {
     "name": "Cody Banks",
     "imageURL": "http://placekitten.com/480/480",
-    "subjects": ["Sociology", "Music", "Computer Science"],
     "subject": "Computer Science",
     "city": "West Linn",
     "year": "Sophomore",

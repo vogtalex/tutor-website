@@ -86,4 +86,73 @@
     {{/each}}
   </section>
 
+  <button type="button" id="add-tutor-button">Click here to add your profile</button>
+
+  <div id="modal-backdrop" class="hidden"></div>
+  <div id="add-tutor-modal" class="hidden">
+    <div class="modal-dialog">
+
+    <div class="modal-header">
+      <h3>Create a new tutor profile</h3>
+      <button type="button" id="modal-close" class="modal-hide-button">&times;</button>
+    </div>
+
+    <div class="modal-body">
+
+      <div class="profile-input">
+        <label for="url-input">Photo URL</label>
+        <input type="text" id="url-input">
+      </div>
+
+      <div class="profile-input">
+        <label for="name-input">Name</label>
+        <input type="text" id="name-input"></input>
+      </div>
+
+      <div class="profile-input">
+        <label for="hourly-rate-input">Hourly Rate</label>
+        <input type="text" id="hourly-rate-input"></input>
+      </div>
+
+      <div class="profile-input">
+        <label for="city-input">City</label>
+        <input type="text" id="city-input"></input>
+      </div>
+
+      <div class="profile-input">
+        <label for="subject-input">Subject</label>
+        <input type="text" id="subject-input"></input>
+      </div>
+
+      <div class="profile-input">
+        <label for="year-input">Year in School</label>
+        <input type="text" id="year-input"></input>
+      </div>
+
+      <div class="profile-input">
+        <label for="zoom-url-input">Zoom URL</label>
+        <input type="text" id="zoom-url-input"></input>
+      </div>
+
+      <div class="profile-input">
+        <label for="experience-input">Experience</label>
+        <input type="text" id="experience-input"></input>
+      </div>
+
+      <div class="profile-input">
+        <label for="email-input">Email</label>
+        <input type="text" id="email-input"></input>
+      </div>
+      
+
+    </div>
+
+    <div class="modal-footer">
+      <button type="button" id="modal-clear" class="modal-hide-button action-button">Clear</button>
+      <button type="button" id="modal-accept" class="action-button">Create Profile</button>
+    </div>
+
+  </div>
+</div>
+
 </main>

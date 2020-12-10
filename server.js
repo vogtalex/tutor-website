@@ -1,16 +1,18 @@
+var fs = require('fs');
 var path = require('path');
 var express = require('express');
 var exphbs = require('express-handlebars');
 var app = express();
-var port = process.env.PORT || 3021;
+var port = process.env.PORT || 6452;
 
-
-var tutorData = require('./tutorData.json');
-console.log('== tutorData:', tutorData);
+var tutorData = require('./tutorData');
+//var tutorData = require('./tutorData.json');
+//console.log('== tutorData:', tutorData);
 
 app.engine('handlebars', exphbs({defaultLayout: "main"}));
 app.set('view engine', 'handlebars');
 
+app.use(express.json());
 app.use(express.static('public'));
 
 app.get('/homePage', function(req, res, next){
@@ -20,6 +22,42 @@ app.get('/homePage', function(req, res, next){
 app.get('/tutorSearch', function(req, res, next) {
   res.status(200).render('tutorSearch', {
     tutors: tutorData});
+});
+
+app.post('tutorSearch/addTutor', function (req, res, next) {
+  console.log("req.body:", req.body);
+  if (req.body) {
+    tutorData.push({
+      name: req.body.name,
+      imageURL: req.body.imageURL,
+      hourlyRate: req.body.hourlyRate,
+      city: req.body.city,
+      subject: req.body.subject,
+      year: req.body.year,
+      zoomURL: req.body.zoomURL,
+      experience: req.body.experience,
+      email: req.body.email,
+      reviewData: req.body.reviewData
+    });
+    console.log("Data in JSON:", tutorData);
+
+    fs.writeFile(
+      __dirname + '/tutorData.json',
+      JSON.stringify(tutorData, null, 2),
+      function (err, data) {
+        if (err) {
+          console.log(" -- err:", err);
+          res.status(500).send("Error saving tutor profile in database");
+        }
+        else {
+          res.status(200).send("Tutor profile successfully added");
+        }
+      }
+    );
+  }
+  else {
+    res.status(400).send("Request body must contain all desired fields");
+  }
 });
 
 app.get('/tutors/:tutor', function(req, res, next) {
