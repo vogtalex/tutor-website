@@ -30,8 +30,7 @@
         "reviewerName": "Chengxi",
         "reviewText": "Nice"
       }
-    ],
-    "_locals": {}
+    ]
   },
   {
     "name": "Cody Banks",
@@ -69,8 +68,7 @@
         "reviewerName": "AHHHHHHHH",
         "reviewText": "Work"
       }
-    ],
-    "_locals": {}
+    ]
   },
   {
     "name": "Mitchell Stewart",
@@ -103,8 +101,7 @@
         "reviewerName": "Not Alex Vogt",
         "reviewText": "excellence"
       }
-    ],
-    "_locals": {}
+    ]
   },
   {
     "name": "Swag McYeet",
@@ -121,8 +118,12 @@
         "rating": "3",
         "reviewerName": "Mitchell Stewart",
         "reviewText": "Average at best"
+      },
+      {
+        "rating": "4",
+        "reviewerName": "Not Alex Vogt Jr.",
+        "reviewText": "He was an excellent tutor ;)"
       }
-    ],
-    "_locals": {}
+    ]
   }
 ]
