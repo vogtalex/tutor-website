@@ -267,7 +267,75 @@ hr.line {
 
 .modal-body {
     padding: 20px;
+    margin: 20px;
+    font-size: 20px;
 }
+
+.profile-input{
+  margin: 20px;
+}
+
+#url-input{
+  position: relative;
+  left: 10px;
+}
+
+#name-input{
+  position: relative;
+  left: 10px;
+}
+
+#hourly-rate-input{
+  position: relative;
+  left: 10px;
+}
+
+#city-input{
+  position: relative;
+  left: 10px;
+}
+
+#subject-input{
+  position: relative;
+  left: 10px;
+}
+
+#year-input{
+  position: relative;
+  left: 10px;
+}
+
+#zoom-url-input{
+  position: relative;
+  left: 10px;
+}
+
+#experience-input{
+  position: relative;
+  left: 10px;
+}
+
+#email-input{
+  position: relative;
+  left: 10px;
+}
+
+.modal-footer{
+  margin-bottom: : 20px;
+}
+
+.action-button{
+  font-size: 20px;
+  height: 50px;
+  width: 180px;
+  margin-top: 10px;
+  margin-left: 10px;
+  border-radius: 5%;
+  position: relative;
+  left: 10%;
+  margin-bottom: 20px;
+}
+
 
 body { 
     background: url("images/cream_dust.png") repeat 0 0;
@@ -455,7 +523,7 @@ body {
   display: inline-block;
   position: relative;
   position: absolute;
-  left: 50%;
+  left: 20%;
   bottom: 33%;
   font-size: 20px;
 }
@@ -531,3 +599,34 @@ body {
 .review-modal-body {
     padding: 20px;
 }
+
+#add-review-button{
+  position: absolute;
+  left: 58%;
+  bottom: 40%;
+  height: 300px;
+  width: 600px;
+  background-color: white;
+  border-radius: 2px;
+  font-size: 25px;
+}
+
+#reviewerName-input{
+  margin: 10px;
+  left: 10px;
+}
+
+#quality-rating-input{
+  margin: 10px;
+  left: 10px;
+}
+
+#review-text-input{
+  margin: 10px;
+  left: 10px;
+}
+
+.review-input{
+  font-size: 20px;
+}
+
