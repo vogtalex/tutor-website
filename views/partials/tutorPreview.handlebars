@@ -4,8 +4,15 @@
       <img src="{{imageURL}}" alt="{{name}}">
     </div>
     <div class="tutor-info-container">
-      <a href="/tutors/{{name}}" class="tutor-title">{{name}}</a> <span class="tutor-year">{{year}}</span> <span class="tutor-price">${{hourlyRate}}</span>
-      <span class="tutor-city"> {{city}} </span> <span class="tutor-subject"> {{subject}} </span>
+      <span>Name: <a href="/tutors/{{name}}" class="tutor-title">{{name}}</a> </span>
+      <hr class="line"> </hr>
+      <span>Year: <span class="tutor-year">{{year}}</span></span>
+      <hr class="line"> </hr>
+      <span>Price: <span class="tutor-price">${{hourlyRate}}</span></span>
+      <hr class="line"> </hr>
+      <span>City: <span class="tutor-city"> {{city}} </span></span>
+      <hr class="line"> </hr>
+      <span>Subject: <span class="tutor-subject"> {{subject}} </span></span>
     </div>
   </div>
 </div>
