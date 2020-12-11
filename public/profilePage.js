@@ -9,10 +9,10 @@ function getTutorIdFromURL() {
 }
 
 function toggleReviewModal() {
-  var modalBackdrop = document.getElementById('modal-backdrop');
+  var modalBackdrop = document.getElementById('review-modal-backdrop');
   var modal = document.getElementById('add-review-modal');
 
-  //modalBackdrop.classList.toggle('hidden');
+  modalBackdrop.classList.toggle('hidden');
   modal.classList.toggle('hidden');
 }
 
@@ -68,10 +68,31 @@ function reviewModalAccept() {
       }
     });
     reviewRequest.send(reqbody);
+
+    ratingTotal += Number(rating);
+    numberRatings += 1;
+    ratingAverage = ratingTotal / numberRatings;
+
+    var addingToEndOfTutorsSection = document.getElementById('average-rating-span');
+    addingToEndOfTutorsSection.textContent = ratingAverage + "/5";
+    
     toggleReviewModal();
   }
 }
 
+var ratingArray = document.getElementsByClassName('review-rating');
+var numberRatings = ratingArray.length;
+console.log("ratingArray[0].textContent", ratingArray[0].textContent);
+var ratingTotal = 0;
+for (var i = 0; i < numberRatings; i++) {
+  ratingTotal += Number(ratingArray[i].textContent);
+}
+var ratingAverage = ratingTotal / numberRatings;
+console.log("average rating:", ratingAverage);
+
+var addingToEndOfTutorsSection = document.getElementById('average-rating-span');
+addingToEndOfTutorsSection.textContent = ratingAverage + "/5";
+console.log("text content:", addingToEndOfTutorsSection.textContent);
 
 var createReviewButton = document.getElementById('add-review-button');
 createReviewButton.addEventListener('click', toggleReviewModal);

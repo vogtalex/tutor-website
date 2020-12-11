@@ -22,7 +22,9 @@ templates['tutorProfile'] = template({"compiler":[8,">= 4.3.0"],"main":function(
     + alias4(((helper = (helper = lookupProperty(helpers,"education") || (depth0 != null ? lookupProperty(depth0,"education") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"education","hash":{},"data":data,"loc":{"start":{"line":15,"column":50},"end":{"line":15,"column":63}}}) : helper)))
     + "</span>\n      <hr></hr>\n      <h4>Work Experience: </h4><span class=\"experience\">"
     + alias4(((helper = (helper = lookupProperty(helpers,"experience") || (depth0 != null ? lookupProperty(depth0,"experience") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"experience","hash":{},"data":data,"loc":{"start":{"line":17,"column":57},"end":{"line":17,"column":71}}}) : helper)))
-    + "</span>\n      <hr></hr>\n      <h4>Quality Rating: </h4><span class=\"rating\">4.9/5 Stars</span>\n      <hr></hr>\n      <h4>Hourly Rate: </h4><span class=\"price\">"
+    + "</span>\n      <hr></hr>\n      <h4>Quality Rating: </h4><span class=\"rating\">"
+    + alias4(((helper = (helper = lookupProperty(helpers,"ratingAverage") || (depth0 != null ? lookupProperty(depth0,"ratingAverage") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"ratingAverage","hash":{},"data":data,"loc":{"start":{"line":19,"column":52},"end":{"line":19,"column":69}}}) : helper)))
+    + "/5 Stars</span>\n      <hr></hr>\n      <h4>Hourly Rate: </h4><span class=\"price\">"
     + alias4(((helper = (helper = lookupProperty(helpers,"hourlyRate") || (depth0 != null ? lookupProperty(depth0,"hourlyRate") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"hourlyRate","hash":{},"data":data,"loc":{"start":{"line":21,"column":48},"end":{"line":21,"column":62}}}) : helper)))
     + "</span>\n  </div>\n</div>\n";
 },"useData":true});

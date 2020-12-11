@@ -47,7 +47,18 @@ function insertTutorPreview(name, imageURL, hourlyRate, city, subject, year) {
 }
 
 var tutorPreviews = [];
+var cityArray = document.getElementsByClassName('city-option');
 var cities = [];
+for (var i = 0; i < cityArray.length; i++) {
+  cities.push(cityArray[i].textContent);
+}
+console.log("cities:", cities);
+var subjectArray = document.getElementsByClassName('subject-option');
+var subjects = [];
+for (var i = 0; i < subjectArray.length; i++) {
+  subjects.push(subjectArray[i].textContent);
+}
+console.log("subjects:", subjects);
 
 function previewIsAcceptable(preview, filters) {
 
@@ -74,12 +85,16 @@ function previewIsAcceptable(preview, filters) {
   }
 
   if (filters.city) {
+    console.log("preview city:", preview.city.toLowerCase());
+    console.log("filter city", filters.city.toLowerCase());
     if (preview.city.toLowerCase() !== filters.city.toLowerCase()) {
       return false;
     }
   }
 
   if (filters.subject) {
+    console.log("preview subject:", preview.subject.toLowerCase());
+    console.log("filter subject", filters.subject.toLowerCase());
     if (preview.subject.toLowerCase() !== filters.subject.toLowerCase()) {
       return false;
     }
@@ -183,6 +198,18 @@ function modalClear() {
   email.value = "";
 }
 
+function createCity(city) {
+  var newCityOption = document.createElement('option');
+  newCityOption.textContent = city;
+  return newCityOption;
+}
+
+function createSubject(subject) {
+  var newSubjectOption = document.createElement('option');
+  newSubjectOption.textContent = subject;
+  return newSubjectOption;
+}
+
 function modalAccept() {
   console.log("modal accept has been clicked");
   var url = document.getElementById('url-input').value.trim();
@@ -222,7 +249,7 @@ function modalAccept() {
     tutorRequest.addEventListener('load', function (event) {
       if (event.target.status === 200) {
         var tutorPreviewTemplate = Handlebars.templates.tutorPreview;
-        var newTutorPreviewHTML = tutorPreviewTemplate({
+        var content = {
           name: name,
           imageURL: url,
           hourlyRate: hourlyRate,
@@ -233,9 +260,27 @@ function modalAccept() {
           experience: experience,
           email: email,
           reviewData: reviewData
-        });
+        }
+        if (cities.indexOf(content.city) == -1) {
+          var cityInHTML = document.getElementById('filter-city');
+          cityInHTML.appendChild(createCity(content.city));
+          cities.push(content.city);
+        }
+        if (subjects.indexOf(content.subject) == -1) {
+          var subjectInHTML = document.getElementById('filter-subject');
+          subjectInHTML.appendChild(createSubject(content.subject));
+          subjects.push(content.subject);
+        }
+
+        var newTutorPreviewHTML = tutorPreviewTemplate(content);
         var tutorsSection = document.getElementById('tutors');
         tutorsSection.insertAdjacentHTML('beforeend', newTutorPreviewHTML);
+
+        tutorPreviews = [];
+        var preloadedPreviews = document.getElementsByClassName('tutor');
+        for (var i = 0; i < preloadedPreviews.length; i++) {
+          tutorPreviews.push(saveCurrentPreviews(preloadedPreviews[i]));
+        }
       }
       else {
         alert("Error adding tutor profile to database:" + event.target.response);
