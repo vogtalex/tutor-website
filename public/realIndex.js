@@ -8,5 +8,5 @@ tutorFinderButton.addEventListener('click', function(){
 
 signInButton.addEventListener('click', function(){
   console.log("== Sign in was clicked");
-  window.location.href = 'tutors.html';
+  window.location.href = '/login';
 });

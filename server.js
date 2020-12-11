@@ -3,11 +3,35 @@ var path = require('path');
 var express = require('express');
 var exphbs = require('express-handlebars');
 var app = express();
-var port = process.env.PORT || 3281;
+
+var cookieParser = require('cookie-parser');
+const session = require('express-session')
+// const RedisStore = require('connect-redis')(session)
+var port = process.env.PORT || 8121;
+
+
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+
+// const redisClient = require('./db/redis')
+// const sessionStore = new RedisStore({
+//   client: redisClient
+// })
+app.use(session({
+  secret: 'WJiol#23123_',
+  cookie: {
+    // path: '/',   // 默认配置
+    // httpOnly: true,  // 默认配置
+    maxAge: 24 * 60 * 60 * 1000
+  }
+}))
 
 var tutorData = require('./tutorData');
 //var tutorData = require('./tutorData.json');
 //console.log('== tutorData:', tutorData);
+var userData = require('./userData')
 
 app.engine('handlebars', exphbs({defaultLayout: "main"}));
 app.set('view engine', 'handlebars');
@@ -19,8 +43,43 @@ app.get('/homePage', function(req, res, next){
   res.status(200).render('homePage');
 });
 
-app.get('/tutorSearch', function(req, res, next) {
-  res.status(200).render('tutorSearch', {tutorData});
+app.get('/login', function(req, res, next) {
+  res.status(200).render('login', {userData})
+})
+
+app.get('/api/userdata', function(req, res, next) {
+  res.status(200).json(userData)
+})
+
+
+app.post('/test', function(req, res) {
+  console.log(req.body);
+  res.json(req.body)
+})
+
+app.post('/api/login', function(req, res, next) {
+    const { username, password } = req.body
+    let t = userData.some(val => {
+      return username == val.username && password == val.password
+    })
+    console.log(t);
+    if (t) {
+      req.session.username = username
+      res.json({errno: 0})
+      return
+    }
+    res.json({errno: -1})
+
+})
+
+app.get('/tutorSearch', async function(req, res, next) {
+  console.log('tutorsession', req.session.username);
+  if(req.session.username) {
+    res.status(200).render('tutorSearch', {tutorData});
+    return
+  } else {
+    res.status(200).render('login');
+  }
 });
 
 app.post('/tutorSearch/:tutor/addTutor', function (req, res, next) {

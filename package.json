@@ -22,10 +22,15 @@
   },
   "homepage": "https://github.com/osu-cs290-f20/final-project-team-22#readme",
   "dependencies": {
+    "connect-redis": "^5.0.0",
+    "cookie-parser": "^1.4.5",
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0",
+    "express-session": "^1.17.1",
     "handlebars": "^4.7.6",
-    "n": "^6.7.1"
+    "jsonwebtoken": "^8.5.1",
+    "n": "^6.7.1",
+    "redis": "^3.0.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.6"
