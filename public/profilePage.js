@@ -1,8 +1,18 @@
+function getTutorIdFromURL() {
+  var path = window.location.pathname;
+  var pathParts = path.split('/');
+  if (pathParts[1] === "tutors") {
+    return pathParts[2];
+  } else {
+    return null;
+  }
+}
+
 function toggleModal() {
   var modalBackdrop = document.getElementById('modal-backdrop');
   var modal = document.getElementById('add-review-modal');
 
-  modalBackdrop.classList.toggle('hidden');
+  //modalBackdrop.classList.toggle('hidden');
   modal.classList.toggle('hidden');
 }
 
@@ -29,11 +39,11 @@ function modalAccept() {
 
   else {
     var reviewRequest = new XMLHttpRequest();
-    var reqURL = '/tutors/' + name;
+    var reqURL = '/tutors/' + getTutorIdFromURL() + '/addReview';
     console.log("req.url:", reqURL);
     reviewRequest.open('POST', reqURL);
 
-    var reqBody = JSON.stringify({
+    var reqbody = JSON.stringify({
       rating: rating,
       reviewerName: reviewerName,
       reviewText: reviewText
@@ -55,7 +65,7 @@ function modalAccept() {
         alert("Error adding tutor review to database:" + event.target.response);
       }
     });
-    reviewRequest.send(reqBody);
+    reviewRequest.send(reqbody);
     toggleModal();
   }
 }
