@@ -59,6 +59,41 @@ app.post('/tutorSearch/:tutor/addTutor', function (req, res, next) {
   }
 });
 
+app.post('/tutors/:tutor/addReview', function (req, res, next) {
+  console.log("req.body:", req.body);
+  var tutor = req.params.tutor;
+  if (req.body) {
+    for (var i = 0; i < tutorData.length; i++)
+    {
+      if (tutorData[i].name == tutor) {
+        tutorData[i].reviewData.push({
+          rating: req.body.rating,
+          reviewerName: req.body.reviewerName,
+          reviewText: req.body.reviewText
+        });
+      }
+    }
+      console.log("== Data for", tutor, ":", tutorData[i]);
+
+      fs.writeFile(
+        __dirname + '/tutorData.json',
+        JSON.stringify(tutorData, null, 2),
+        function (err, data) {
+          if (err) {
+            console.log(" -- err:", err);
+            res.status(500).send("Error saving tutor profile in database");
+          }
+          else {
+            res.status(200).send("Tutor profile successfully added");
+          }
+        }
+      );
+    }
+    else {
+      res.status(400).send("Request body must contain all desired fields");
+    }
+});
+
 app.get('/tutors/:tutor', function(req, res, next) {
   var tutor = req.params.tutor;
   console.log("param:", tutor);
@@ -68,7 +103,6 @@ app.get('/tutors/:tutor', function(req, res, next) {
       res.status(200).render('profilePage', tutorData[i]);
     }
   }
-  next();
 });
 
 //app.get('/about')

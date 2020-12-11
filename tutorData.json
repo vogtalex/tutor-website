@@ -19,6 +19,16 @@
         "rating": 2,
         "reviewerName": "Timmy Turner",
         "reviewText": "Met him once, he was a dweeb, cool dog though"
+      },
+      {
+        "rating": "5",
+        "reviewerName": "Mason",
+        "reviewText": "sick bro"
+      },
+      {
+        "rating": "69",
+        "reviewerName": "Chengxi",
+        "reviewText": "Nice"
       }
     ]
   },
