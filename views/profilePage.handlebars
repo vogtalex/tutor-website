@@ -2,9 +2,51 @@
     {{#if this.name}}
       {{> tutorProfile}}
     {{/if}}
-    {{#if reviewData}}
-      {{#each reviewData}}
-        {{> tutorReview}}
-      {{/each}}
-    {{/if}}
+    
+    <section id='reviews'>
+      {{#if reviewData}}
+        {{#each reviewData}}
+          {{> tutorReview}}
+        {{/each}}
+      {{/if}}
+    </section>
+
+    <button type="button" id="add-review-button">Click here to leave a new review!</button>
+
+    <div id="modal-backdrop" class="hidden"></div>
+    <div id="add-review-modal" class="hidden">
+      <div class="modal-dialog">
+
+      <div class="modal-header">
+        <h3>Tell us about your experience with this tutor</h3>
+        <button type="button" id="modal-close" class="modal-hide-button">&times;</button>
+      </div>
+
+      <div class="modal-body">
+
+        <div class="review-input">
+          <label for="reviewer-name-input">Your Name</label>
+          <input type="text" id="reviewer-name-input">
+        </div>
+
+        <div class="review-input">
+          <label for="quality-rating-input">Quality Rating</label>
+          <input type="text" id="quality-rating-input"></input>
+        </div>
+
+        <div class="review-input">
+          <label for="review-text-input">Review</label>
+          <input type="text" id="review-text-input"></input>
+        </div>
+
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" id="modal-clear" class="modal-hide-button action-button">Clear</button>
+        <button type="button" id="modal-accept" class="action-button">Leave Review</button>
+      </div>
+
+    </div>
+  </div>
+
 </main>
