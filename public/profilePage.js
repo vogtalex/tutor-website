@@ -53,12 +53,12 @@ function reviewModalAccept() {
     reviewRequest.addEventListener('load', function (event) {
       console.log("event target status:", event.target.status);
       if (event.target.status === 200) {
-        var content = {
+        var tutorReviewTemplate = Handlebars.templates.tutorReview;
+        var newTutorReviewHTML = tutorReviewTemplate({
           rating: rating,
           reviewerName: reviewerName,
           reviewText: reviewText
-        }
-        var tutorReviewTemplate = Handlebars.templates.tutorReview(content);
+        });
         console.log("New tutor review html", newTutorReviewHTML);
         var reviewsSection = document.getElementById('reviews');
         reviewsSection.insertAdjacentHTML('beforeend', newTutorReviewHTML);
