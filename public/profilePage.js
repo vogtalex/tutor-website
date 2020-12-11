@@ -8,7 +8,7 @@ function getTutorIdFromURL() {
   }
 }
 
-function toggleModal() {
+function toggleReviewModal() {
   var modalBackdrop = document.getElementById('modal-backdrop');
   var modal = document.getElementById('add-review-modal');
 
@@ -16,7 +16,7 @@ function toggleModal() {
   modal.classList.toggle('hidden');
 }
 
-function modalClear() {
+function reviewModalClear() {
   var rating = document.getElementById('quality-rating-input');
   var reviewerName = document.getElementById('reviewerName-input');
   var reviewText = document.getElementById('review-text-input');
@@ -27,7 +27,7 @@ function modalClear() {
   reviewText.value = "";
 }
 
-function modalAccept() {
+function reviewModalAccept() {
   console.log("modal accept has been clicked");
   var rating = document.getElementById('quality-rating-input').value.trim();
   var reviewerName = document.getElementById('reviewerName-input').value.trim();
@@ -51,13 +51,15 @@ function modalAccept() {
 
     reviewRequest.setRequestHeader('Content-Type', 'application/json');
     reviewRequest.addEventListener('load', function (event) {
+      console.log("event target status:", event.target.status);
       if (event.target.status === 200) {
-        var tutorReviewTemplate = Handlebars.templates.tutorReview;
-        var newTutorReviewHTML = tutorReviewTemplate({
+        var content = {
           rating: rating,
           reviewerName: reviewerName,
           reviewText: reviewText
-        });
+        }
+        var tutorReviewTemplate = Handlebars.templates.tutorReview(content);
+        console.log("New tutor review html", newTutorReviewHTML);
         var reviewsSection = document.getElementById('reviews');
         reviewsSection.insertAdjacentHTML('beforeend', newTutorReviewHTML);
       }
@@ -66,19 +68,19 @@ function modalAccept() {
       }
     });
     reviewRequest.send(reqbody);
-    toggleModal();
+    toggleReviewModal();
   }
 }
 
 
 var createReviewButton = document.getElementById('add-review-button');
-createReviewButton.addEventListener('click', toggleModal);
+createReviewButton.addEventListener('click', toggleReviewModal);
 
-var modalCloseButton = document.getElementById('modal-close');
-modalCloseButton.addEventListener('click', toggleModal);
+var reviewCloseButton = document.getElementById('review-modal-close');
+reviewCloseButton.addEventListener('click', toggleReviewModal);
 
-var modalClearButton = document.getElementById('modal-clear');
-modalClearButton.addEventListener('click', modalClear);
+var reviewClearButton = document.getElementById('review-modal-clear');
+reviewClearButton.addEventListener('click', reviewModalClear);
 
-var modalAcceptButton = document.getElementById('modal-accept');
-modalAcceptButton.addEventListener('click', modalAccept);
+var reviewAcceptButton = document.getElementById('review-modal-accept');
+reviewAcceptButton.addEventListener('click', reviewModalAccept);
