@@ -1,7 +1,7 @@
 [
   {
     "name": "Jimmy Neutron",
-    "imageURL": "http://placekitten.com/480/480",
+    "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtIl4mv8vcfLKDDgqcR1WmKbDCvqWdnwCPhw&usqp=CAU",
     "subject": "Math",
     "city": "Corvallis",
     "year": "Junior",
@@ -26,15 +26,31 @@
         "reviewText": "sick bro"
       },
       {
-        "rating": "69",
+        "rating": "4",
         "reviewerName": "Chengxi",
         "reviewText": "Nice"
+      },
+      {
+        "rating": "5",
+        "reviewerName": "Mitchell Stewart",
+        "reviewText": "So good"
+      },
+      {
+        "rating": "4",
+        "reviewerName": "Mitchell Stewart Jr.",
+        "reviewText": "excellence"
+      },
+      {
+        "rating": "5",
+        "reviewerName": "Mitchell Stewart Jr. Jr.",
+        "reviewText": "excellence"
       }
-    ]
+    ],
+    "_locals": {}
   },
   {
     "name": "Cody Banks",
-    "imageURL": "http://placekitten.com/480/480",
+    "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT--OB3Ggc3seS7BkLTc1WCEqA66bIL_6w7UA&usqp=CAU",
     "subject": "Computer Science",
     "city": "West Linn",
     "year": "Sophomore",
@@ -62,17 +78,12 @@
         "rating": "1",
         "reviewerName": "Please work",
         "reviewText": "Please please please work you fucker"
-      },
-      {
-        "rating": "1",
-        "reviewerName": "AHHHHHHHH",
-        "reviewText": "Work"
       }
     ]
   },
   {
     "name": "Mitchell Stewart",
-    "imageURL": "http://placekitten.com/480/480",
+    "imageURL": "http://web.engr.oregonstate.edu/~stewamit/CS290/final-project-team-22/public/images/mitchell_pic.png",
     "hourlyRate": "200",
     "city": "West Linn",
     "subject": "Economics",
@@ -100,29 +111,11 @@
         "rating": "5",
         "reviewerName": "Not Alex Vogt",
         "reviewText": "excellence"
-      }
-    ]
-  },
-  {
-    "name": "Swag McYeet",
-    "imageURL": "http://placekitten.com/480/480",
-    "hourlyRate": "500",
-    "city": "Woodinville",
-    "subject": "Math",
-    "year": "Senior",
-    "zoomURL": "yeetyeet.com",
-    "experience": "Not a lot tbh",
-    "email": "mitchthebeast844@yahoo.com",
-    "reviewData": [
-      {
-        "rating": "3",
-        "reviewerName": "Mitchell Stewart",
-        "reviewText": "Average at best"
       },
       {
-        "rating": "4",
-        "reviewerName": "Not Alex Vogt Jr.",
-        "reviewText": "He was an excellent tutor ;)"
+        "rating": "5",
+        "reviewerName": "Test Dummy",
+        "reviewText": "Should move rating to 4.8"
       }
     ]
   }
