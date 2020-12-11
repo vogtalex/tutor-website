@@ -14,16 +14,9 @@ var port = process.env.PORT || 8121;
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-
-// const redisClient = require('./db/redis')
-// const sessionStore = new RedisStore({
-//   client: redisClient
-// })
 app.use(session({
   secret: 'WJiol#23123_',
   cookie: {
-    // path: '/',   // 默认配置
-    // httpOnly: true,  // 默认配置
     maxAge: 24 * 60 * 60 * 1000
   }
 }))
