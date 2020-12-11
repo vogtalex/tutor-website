@@ -30,7 +30,8 @@
         "reviewerName": "Chengxi",
         "reviewText": "Nice"
       }
-    ]
+    ],
+    "_locals": {}
   },
   {
     "name": "Cody Banks",
@@ -52,8 +53,24 @@
         "rating": 1,
         "reviewerName": "Lava Girl",
         "reviewText": "Not enough lava"
+      },
+      {
+        "rating": "5",
+        "reviewerName": "Alex Vogt the Third",
+        "reviewText": "yeeeeeeeeeeeeet"
+      },
+      {
+        "rating": "1",
+        "reviewerName": "Please work",
+        "reviewText": "Please please please work you fucker"
+      },
+      {
+        "rating": "1",
+        "reviewerName": "AHHHHHHHH",
+        "reviewText": "Work"
       }
-    ]
+    ],
+    "_locals": {}
   },
   {
     "name": "Mitchell Stewart",
@@ -65,6 +82,47 @@
     "zoomURL": "yeet.com",
     "experience": "I am very good at economics",
     "email": "vogta@oregonstate.edu",
-    "reviewData": []
+    "reviewData": [
+      {
+        "rating": "5",
+        "reviewerName": "Alex Vogt",
+        "reviewText": "He was exceptional. The best there is!"
+      },
+      {
+        "rating": "4",
+        "reviewerName": "Margot Robbie",
+        "reviewText": "He was an excellent tutor ;)"
+      },
+      {
+        "rating": "5",
+        "reviewerName": "Alex Vogt Jr.",
+        "reviewText": "So good"
+      },
+      {
+        "rating": "5",
+        "reviewerName": "Not Alex Vogt",
+        "reviewText": "excellence"
+      }
+    ],
+    "_locals": {}
+  },
+  {
+    "name": "Swag McYeet",
+    "imageURL": "http://placekitten.com/480/480",
+    "hourlyRate": "500",
+    "city": "Woodinville",
+    "subject": "Math",
+    "year": "Senior",
+    "zoomURL": "yeetyeet.com",
+    "experience": "Not a lot tbh",
+    "email": "mitchthebeast844@yahoo.com",
+    "reviewData": [
+      {
+        "rating": "3",
+        "reviewerName": "Mitchell Stewart",
+        "reviewText": "Average at best"
+      }
+    ],
+    "_locals": {}
   }
 ]

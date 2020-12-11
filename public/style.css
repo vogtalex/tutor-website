@@ -472,3 +472,58 @@ body {
   padding: 10px;
   font-size: 20px;
 }
+
+#review-modal-backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 150;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+#add-review-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  overflow: scroll;
+}
+
+.review-modal-dialog {
+    width: auto;
+    max-width: 600px;
+    min-width: 350px;
+    min-height: 300px;
+    margin: 40px auto;
+    background-color: #fff;
+    border-radius: 15px;
+}
+
+.review-modal-header {
+    position: relative;
+    padding: 10px 20px;
+}
+
+.review-modal-header h3 {
+    margin: 0;
+    font-size: 28px;
+}
+
+#review-modal-close {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 24px;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.review-modal-body {
+    padding: 20px;
+}
