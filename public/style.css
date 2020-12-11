@@ -32,6 +32,10 @@ header {
     font-weight: 100;
     margin: 0 0 0 20px;
     padding-top: 30px;
+    position: relative;
+    left: 35%;
+    bottom: 20px;
+    max-width: 500px;
 }
 
 .site-title a:hover{
@@ -51,7 +55,7 @@ header {
     float: left;
     color: black;
     text-align: center;
-    padding: 14px 16px;
+    padding: 16px 241px;
     text-decoration: none;
     font-size: 30px;
 }

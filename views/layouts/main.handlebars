@@ -5,7 +5,6 @@
     <title>OSU Tutors</title>
     <link rel="stylesheet" href="/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.runtime.js" charset="utf-8" defer></script>
-   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" crossorigin="anonymous">
     <script src="/tutorPreviewTemplate.js" charset="utf-8" defer></script>
     <script src="/tutorProfileTemplate.js" charset="utf-8" defer></script>
     <script src="/tutorReviewTemplate.js" charset="utf-8" defer></script>
@@ -20,12 +19,19 @@
 
       </div>
       <h1 class="site-title"><a href="#">OSU Tutors</a></h1>
-      <div class="navbar">
-        <a class="active" href="/homePage">Home</a>
-        <a href="/tutorSearch">Tutors</a>
-        <a href="/about.html">Contact</a>
-        <a href="/about.html">About</a>
-      </div>
+      {{#if tutorData}}
+        <div class="navbar">
+          <a href="/homePage">Home</a>
+          <a class="active" href="/tutorSearch">Tutors</a>
+          <a href="about.html">About</a>
+        </div>
+      {{else}}
+        <div class="navbar">
+          <a class="active" href="/homePage">Home</a>
+          <a href="/tutorSearch">Tutors</a>
+          <a href="about.html">About</a>
+        </div>
+      {{/if}}
     </header>
 
     {{{body}}}
